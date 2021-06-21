@@ -19,7 +19,7 @@ pipeline {
                                    usernameVariable:'USERNAME',
                                    passwordVariable: 'PASSWORD'
                         ]]){
-                            sh ' -i "ops-aws-key.pem"centos@ec2-13-36-39-148.eu-west-3.compute.amazonaws.com'
+                            ssh -i "ops-aws-key.pem" root@ec2-15-188-14-146.eu-west-3.compute.amazonaws.com
                             sh 'push'
                         }
 
